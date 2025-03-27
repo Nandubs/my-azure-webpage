@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Web Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cab Booking</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to My Azure Hosted Web Page</h1>
+        <h1>Cab Booking Service 🚕</h1>
     </header>
+
     <main>
-        <p>This is a sample web page hosted on Azure.</p>
-        <button onclick="showAlert()">Click Me</button>
+        <form id="booking-form">
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" placeholder="Enter pickup location" required>
+
+            <label for="drop">Drop Location:</label>
+            <input type="text" id="drop" placeholder="Enter drop location" required>
+
+            <label for="cab-type">Cab Type:</label>
+            <select id="cab-type" required>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="mini">Mini</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Book Cab</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmation ✅</h2>
+            <p id="booking-details"></p>
+        </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
