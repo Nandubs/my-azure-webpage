@@ -6,64 +6,108 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+    background: linear-gradient(135deg, #74EBD5, #ACB6E5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    background: #4CAF50;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-form {
+/* Container Styling */
+main {
     background: #fff;
+    padding: 40px;
+    width: 100%;
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
 }
 
 input,
 select,
 button {
-    width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px #4CAF50;
+}
+
+/* Button Styling */
 button {
     background: #4CAF50;
-    color: white;
-    border: none;
+    color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.hidden {
-    display: none;
-}
-
+/* Booking Confirmation */
 #confirmation {
-    text-align: center;
-    background: #e0f7fa;
+    margin-top: 20px;
     padding: 20px;
+    background: #e0f7fa;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#confirmation:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
